@@ -278,6 +278,10 @@ max-width: 100%;
 width: 100%;
 font-size: 14px;
 }
+.bootstrap-logo {
+    width: 30px; 
+    right: -140px; 
+  }
 }
 
 @media (max-width: 480px) {
@@ -290,9 +294,13 @@ height: 130px;
 font-size: 14px;
 }
 .left-content p {
-font-size: 14px; /* Reduce font size for smaller screens */
-margin: 0; /* Reduce margin to avoid too much space */
+font-size: 14px; 
+margin: 0;
 }
+ .bootstrap-logo {
+    width: 25px; 
+    right: -122px; 
+  }
 }
 
 @keyframes fadeInUp {
