@@ -479,3 +479,54 @@ body.dark-mode .theme-toggle {
 body.dark-mode .theme-toggle {
   color: white;
 }
+body.dark-mode section {
+	  background-color: #121212;
+  color: white;
+  box-shadow: 0 0 10px #ccdacc82;
+}
+body.dark-mode .about-container p,
+body.dark-mode .left-content p {
+background-color: #121212;
+  color: white;
+  }
+body.dark-mode h2 {
+	  background-color: #121212;
+  color: white;
+}
+body.dark-mode h2::after {
+	content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+body.dark-mode .project h3 {
+  color: white;
+}
+body.dark-mode .project {
+  background-color: #121212;
+  color: #f4f4f4;
+  box-shadow: 0 0 10px #ccdacc82;
+}
+
+body.dark-mode .project:hover {
+  transform: scale(0.9);
+  box-shadow: 0 0 10px #ccdacc82;
+}
+
+body.dark-mode #contact a {
+  color: white;
+  text-decoration: none;
+}
+
+body.dark-mode #contact p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+body.dark-mode .skills-list li {
+  background-color: #333;
+}
