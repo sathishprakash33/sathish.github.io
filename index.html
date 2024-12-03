@@ -19,6 +19,9 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+	 <button class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun"></i>
+      </button>
       </ul>
     </nav>
   </header>
@@ -102,6 +105,27 @@
         });
       }
     };
+const themeToggleButton = document.getElementById('theme-toggle');
+const body = document.body;
+if (localStorage.getItem('theme') === 'dark') {
+  body.classList.add('dark-mode');
+  themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+} else {
+  body.classList.add('light-mode');
+  themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+}
+themeToggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+    themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+  } else {
+    localStorage.setItem('theme', 'light');
+    themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+  }
+});
+
 </script>
 
    <section id="projects" class="section">
