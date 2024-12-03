@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>My Portfolio</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+<section id="about" class="section">   
+ <h2>Hi, I'm Sathish - Full Stack Developer</h2>
+
+  <div class="about-container">    
+    <!-- Left Side -->
+    <div class="left-content">
+  
+      <p>Welcome to My Portfolio! I'm a developer with a passion for front-end technologies like Angular, while also skilled in back-end development using C# and SQL.</p>
+      
+      <div class="social-links">
+		<a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin">
+        <i class="fa-brands fa-linkedin-in fs-3 p-1 mt-2 rounded text-black cursor-pointer" >
+        </i>
+    </a>
+ <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">
+        <i class="fa-brands fa-instagram fs-3 p-1 mt-2 rounded text-black cursor-pointer" >
+        </i>
+    </a>      </div>
+    </div>
+	     <div class="profile-photo-container">
+		  <img src="E:\myportfolio\assets\angular.png" alt="Angular Logo" class="angular-logo">
+ <div class="boot">
+       <img src="E:\myportfolio\assets\bootstrap.png" alt="Bootstrap Logo" class="bootstrap-logo">
+
+ </div>
+        <img src="E:\myportfolio\assets\Image-removebg-preview.png" alt="Sathish" class="profile-photo">
+      </div>
+
+    <!-- Right Side -->
+    <div class="right-content">
+      <button class="resume-view-button">View Resume</button>
+      <p class="resume-description">My resume with just a click, giving you quick access to my professional background and skills.</p>
+    </div>
+  </div>
+</section>
+
+  
+
+  <!-- Skills Section -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <marquee id="skills-marquee" scrollamount="14" direction="right">
+    <ul class="skills-list">
+      <li>HTML & CSS</li>
+      <li>TypeScript & Angular</li>
+      <li>C# & SQL</li>
+    </ul>
+  </marquee>
+</section>
+<script>
+  document.getElementById('skills-marquee').addEventListener('mouseenter', function() {
+    this.stop();
+  });
+  document.getElementById('skills-marquee').addEventListener('mouseleave', function() {
+    this.start();
+  });
+  document.querySelectorAll('.nav-links a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    window.scrollTo({
+      top: targetElement.offsetTop - 80,
+      behavior: 'smooth'
+    });
+  });
+});
+   window.onload = function() {
+      const aboutSection = document.getElementById('about');
+      if (aboutSection) {
+        window.scrollTo({
+          top: aboutSection.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    };
+</script>
+
+   <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project">
+        <h3>Loan Origination System (LOS)</h3>
+        <p>Developed a Loan Origination System (LOS) to streamline the loan application process. The project uses Angular for the frontend, C# (ASP.NET Core) for the backend, and SQL Server for data storage.</p>
+        <p><strong>Technologies Used:</strong> Angular, C#, SQL Server</p>
+        <ul>
+          <li>Responsive UI for loan applications and status tracking</li>
+          <li>Role-based access control (Admin, Loan Officer, Customer)</li>
+          <li>RESTful APIs for loan application handling</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Task Management System</h3>
+        <p>Developed a Task Management System to help organizations assign, track, and complete tasks efficiently. Managers can assign tasks, and employees can update their status and progress.</p>
+        <p><strong>Technologies Used:</strong> Angular, C#, MYSQL</p>
+        <ul>
+          <li>Task creation and assignment with deadlines</li>
+          <li>Employee dashboard to track tasks</li>
+          <li>Task reporting and performance analysis for managers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sathishprakash33@example.com">sathishprakash33@example.com</a></p>
+    <p>Phone: 9361706033</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 My Portfolio | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,429 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+line-height: 1.6;
+background-color: #f4f4f4;
+color: #333;
+padding-top: 60px; 
+}
+
+header {
+background-color: #1c4d1c;
+color: white;
+padding: 13px 0;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+.nav-links li a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+position: relative; 
+}
+.nav-links li a::after {
+content: ''; 
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 0%;
+height: 2px;
+background-color: white;
+transition: width 0.3s ease; 
+}
+
+.nav-links li a:hover::after {
+width: 100%;
+}
+
+.about-container {
+display: flex;
+align-items: center;
+gap: 30px; 
+}
+.profile-photo-container {
+width: 180px;
+height: 180px;
+overflow: hidden;
+border-radius: 50%;
+/* box-shadow: 0 4px 10px #1c4d1c85;  */
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 0.3s ease;
+animation: fadeInside 1s ease-out forwards 0.2s;
+}
+
+/* Profile Photo */
+.profile-photo {
+height: 100%;
+object-fit: cover; /* Ensures the photo covers the entire circle */
+transition: opacity 0.1s ease;
+width:164px;
+}
+@keyframes bounceAndScale {
+0% {
+transform: translateY(0) scale(0.5); /* Start small and at original position */
+}
+25% {
+transform: translateY(-15px) scale(0.6); /* Bounce up, slightly larger */
+}
+50% {
+transform: translateY(0) scale(0.5); /* Back to the original position */
+}
+75% {
+transform: translateY(-7px) scale(0.55); /* Small bounce and a little bigger */
+}
+100% {
+transform: translateY(0) scale(0.5); /* End at the small size */
+}
+}
+
+/* Apply the bounce and scale animation to the Angular logo */
+.angular-logo {
+position: absolute;
+z-index: 2; 
+animation: bounceAndScale 9s ease-in-out infinite, moveLeftBounce 12s linear infinite; /* Add rotation animation */
+width: 30px;
+transition: transform 0.2s ease-out;
+left:3px;  
+
+}
+@keyframes moveLeftBounce {
+0% {
+    transform: translate(0)
+}
+
+50% {
+    transform: translate(-4.64px, -27px);
+}
+
+to {
+    transform: translate(0)
+}
+}
+@keyframes moverightBounce {
+0% {
+    transform: translate(0)
+}
+
+50% {
+    transform: translate(3.64px, 6px);
+}
+
+to {
+    transform: translate(0)
+}
+}
+.boot{
+animation: moverightBounce 9s ease-in-out infinite;/* Add rotation animation */
+
+}
+.bootstrap-logo {
+position: absolute;
+z-index: 2; 
+animation: spinLogo 5s linear infinite; 
+width: 40px; 
+transition: transform 0.2s ease-out;
+right:-172px;  
+}
+/* About Section Layout */
+.about-container {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+text-align: left;
+opacity: 0;
+transform: translateY(30px);
+animation: fadeInUp 1s ease-out forwards 0.2s;
+}
+@keyframes spinLogo {
+0% {
+transform: rotateY(0deg);
+}
+100% {
+transform: rotateY(360deg);
+}
+}
+.left-content p {
+font-size: 16px;
+line-height: 1.6;
+color: #333;
+margin-bottom: 20px;
+max-width:280px;
+margin:30px;
+}
+.social-icon {
+display: inline-block;
+margin: 0 2px;
+text-decoration: none;
+font-size: 24px;
+color: #333;
+transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+transform: scale(1.1);
+}
+
+.social-icon i {
+display: inline-block;
+color: white;
+}
+
+.social-icon.instagram i {
+background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+padding: 8px;
+border-radius: 30%;
+font-size: 20px;
+transition: background 0.3s ease;
+}
+.social-icon.linkedin i {
+background: #007bb5;
+padding: 8px;
+border-radius: 30%;
+font-size: 20px; 
+transition: background 0.3s ease;
+}
+.social-icon.instagram:hover i {
+background: linear-gradient(45deg, #bc1888 0%, #f09433 25%, #e6683c 50%, #dc2743 75%, #cc2366 100%);
+background: linear-gradient(45deg, #bc1888 0%, #f09433 25%, #e6683c 50%, #dc2743 75%, #cc2366 100%);
+}
+
+
+.right-content {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+max-width: 45%;
+margin:10px;
+padding:15px;
+}
+
+/* Resume View Button */
+.resume-view-button {
+padding: 12px 24px;
+background-color: #2ecc71;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+margin-bottom: 20px;
+}
+
+.resume-view-button:hover {
+background-color: #27ae60;
+}
+
+/* Resume Description */
+.resume-description {
+font-size: 16px;
+color: #333;
+max-width: 400px;
+line-height: 1.6;
+}
+.about-container p {
+font-size: 16px;
+line-height: 1.6;
+color: #333;
+}
+
+@media (max-width: 768px) {
+.profile-photo-container {
+width: 150px;
+height: 150px;
+}
+
+.about-container {
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.left-content {
+max-width: 100%;
+}
+
+.right-content {
+max-width: 100%;
+}
+
+.resume-view-button {
+width: 100%;
+font-size: 14px;
+}
+}
+
+@media (max-width: 480px) {
+.profile-photo-container {
+width: 130px;
+height: 130px;
+}
+
+.about-container p {
+font-size: 14px;
+}
+.left-content p {
+font-size: 14px; /* Reduce font size for smaller screens */
+margin: 0; /* Reduce margin to avoid too much space */
+}
+}
+
+@keyframes fadeInUp {
+0% {
+opacity: 0;
+transform: translateY(30px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+@keyframes fadeInside {
+0% {
+opacity: 0;
+transform: translateX(30px);
+}
+100% {
+opacity: 1;
+transform: translateY(0px);
+}
+}
+.section {
+padding: 20px;
+margin: 25px 25px;
+max-width: 1200px;
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 0 10px rgb(55 98 55 / 51%);
+margin-top: 20px;
+animation: fadeInUp 1s ease-out forwards;
+
+
+}
+
+.skills-list {
+list-style: none;
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.skills-list li {
+background-color: #1c4d1c;
+color: white;
+padding: 10px;
+border-radius: 5px;
+}
+
+.projects-container {
+display: flex;
+gap: 20px;
+justify-content: space-between;
+}
+
+.project {
+background-color: #ffffff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgb(55 98 55 / 51%);
+width: 48%;
+margin-top:10px;
+transition: all 0.3s ease; 
+transform: scale(1);
+}
+.project:hover {
+transform: scale(0.9);
+box-shadow: 0 0 10px rgb(55 98 55 / 51%);
+}
+.project h3 {
+font-size: 1.5rem;
+margin-bottom: 10px;
+}
+
+.project ul {
+list-style: none;
+padding-left: 20px;
+}
+
+.project li {
+margin-bottom: 5px;
+}
+
+#contact p {
+font-size: 1rem;
+margin-bottom: 10px;
+}
+
+#contact a {
+color: #1c4d1ce0;
+text-decoration: none;
+}
+footer {
+background-color: #1c4d1c;
+color: white;
+text-align: center;
+padding: 20px;
+position: relative;
+bottom: 0;
+width: 100%;
+}
+
+footer p {
+font-size: 14px;
+line-height: 1.5;
+}
+marquee:hover {
+cursor: pointer;
+}
+
+
+h2 {
+font-weight: bold;
+text-transform: uppercase;
+color: #1c4d1c; 
+text-align: center; 
+position: relative; 
+margin-bottom: 20px; 
+letter-spacing: 2px;
+padding: 10px 0;
+background-color: #f0f8f0; 
+border-radius: 8px;
+}
+
+h2::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 80%;
+height: 3px;
+background-color: #1c4d1c;
+border-radius: 2px;
+}
