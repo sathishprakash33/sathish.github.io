@@ -80,29 +80,27 @@ animation: fadeInside 1s ease-out forwards 0.2s;
 /* Profile Photo */
 .profile-photo {
 height: 100%;
-object-fit: cover; /* Ensures the photo covers the entire circle */
+object-fit: cover;
 transition: opacity 0.1s ease;
 width:164px;
 }
 @keyframes bounceAndScale {
 0% {
-transform: translateY(0) scale(0.5); /* Start small and at original position */
+transform: translateY(0) scale(0.5); 
 }
 25% {
-transform: translateY(-15px) scale(0.6); /* Bounce up, slightly larger */
+transform: translateY(-15px) scale(0.6);
 }
 50% {
-transform: translateY(0) scale(0.5); /* Back to the original position */
+transform: translateY(0) scale(0.5);
 }
 75% {
-transform: translateY(-7px) scale(0.55); /* Small bounce and a little bigger */
+transform: translateY(-7px) scale(0.55); 
 }
 100% {
-transform: translateY(0) scale(0.5); /* End at the small size */
+transform: translateY(0) scale(0.5); 
 }
 }
-
-/* Apply the bounce and scale animation to the Angular logo */
 .angular-logo {
 position: absolute;
 z-index: 2; 
@@ -139,7 +137,7 @@ to {
 }
 }
 .boot{
-animation: moverightBounce 9s ease-in-out infinite;/* Add rotation animation */
+animation: moverightBounce 9s ease-in-out infinite;
 
 }
 .bootstrap-logo {
@@ -434,4 +432,36 @@ width: 80%;
 height: 3px;
 background-color: #1c4d1c;
 border-radius: 2px;
+}
+body.dark-mode {
+  background-color: #121212;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .nav-links a {
+  color: #ffffff;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+.theme-toggle {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+body.dark-mode .theme-toggle {
+  color: white; 
+}
+body.dark-mode .theme-toggle {
+  color: white;
 }
