@@ -24,7 +24,17 @@ left: 0;
 width: 100%;
 z-index: 1000;
 }
-
+.hamburger {
+  display: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+}
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 nav {
 display: flex;
 justify-content: space-between;
