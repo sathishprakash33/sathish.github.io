@@ -11,19 +11,24 @@
   <!-- Header Section -->
   <header>
     <nav>
-      <div class="logo">
-        <h1>My Portfolio</h1>
-      </div>
+    <div class="logo">
+      <h1>My Portfolio</h1>
+    </div>
+    <div class="nav-items">
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-	 <button class="theme-toggle" id="theme-toggle">
-        <i class="fas fa-sun"></i>
-      </button>
       </ul>
-    </nav>
+      <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun"></i>
+      </div>
+    </div>
+    <div class="hamburger" id="hamburger-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
   </header>
 
   <!-- About Me Section -->
@@ -125,7 +130,24 @@ themeToggleButton.addEventListener('click', () => {
     themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
   }
 });
+const navLinks = document.querySelector(".nav-links");
+const navLinksItems = document.querySelectorAll(".nav-links a");
 
+hamburgerIcon.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+navLinksItems.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");  
+  });
+});
+
+window.addEventListener("scroll", () => {
+  if (navLinks.classList.contains("active")) {
+    navLinks.classList.remove("active");  
+  }
+});
 </script>
 
    <section id="projects" class="section">
