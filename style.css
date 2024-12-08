@@ -209,6 +209,13 @@ border-radius: 30%;
 font-size: 20px;
 transition: background 0.3s ease;
 }
+.social-icon.github i {
+  background: black;
+  padding: 8px;
+  border-radius: 30%;
+  font-size: 20px; /* Larger icon size */
+  transition: background 0.3s ease;
+}
 .social-icon.linkedin i {
 background: #007bb5;
 padding: 8px;
@@ -594,4 +601,8 @@ body.dark-mode .nav-links.active {
 }
 body.dark-mode .nav-links {
   background-color: #1e1e1e;
+}
+body.dark-mode .social-icon {
+  border: 2px solid white;  
+  border-radius: 30%;
 }
