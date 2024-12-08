@@ -592,3 +592,6 @@ body.dark-mode .skills-list li {
 body.dark-mode .nav-links.active {
   background-color: #1e1e1e; 
 }
+body.dark-mode .nav-links {
+  background-color: #1e1e1e;
+}
