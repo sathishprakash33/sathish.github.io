@@ -602,6 +602,15 @@ body.dark-mode .social-icon {
   border: 2px solid white;  
   border-radius: 30%;
 }
+body.dark-mode .animated-icons{
+	background-color: #1e1e1e;
+}
+body.dark-mode .resume-view-button{
+	background-color: #1e1e1e;
+	color:white;
+	border: 2px solid white;  
+
+}
 
 .animated-icons {
   display: flex;
