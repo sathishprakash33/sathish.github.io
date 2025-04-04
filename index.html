@@ -8,7 +8,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header Section -->
   <header>
     <nav>
     <div class="logo">
@@ -31,14 +30,11 @@
   </nav>
   </header>
 
-  <!-- About Me Section -->
 <section id="about" class="section">   
  <h2>Hi, I'm Sathish - Full Stack Developer</h2>
 
   <div class="about-container">    
-    <!-- Left Side -->
     <div class="left-content">
-  
       <p>Welcome to My Portfolio! I'm a developer with a passion for front-end technologies like Angular, while also skilled in back-end development using C# and SQL.</p>
       
       <div class="social-links">
@@ -65,24 +61,50 @@
         <img src="assets/Image-removebg-preview.png" alt="Sathish" class="profile-photo">
       </div>
 
-    <!-- Right Side -->
-    <div class="right-content">
-      <button class="resume-view-button">View Resume</button>
-      <p class="resume-description">My resume with just a click, giving you quick access to my professional background and skills.</p>
+  <div class="right-content">    
+  <div class="animated-icons">
+    <div class="scroll-content">
+      <div class="scroll-items">
+        <i class="fa-solid fa-code"></i>
+        <span>Portfolio</span>
+        <i class="fa-solid fa-lightbulb"></i>
+        <span>Portfolio</span>
+        <i class="fa-solid fa-head-side-virus"></i>
+        <span>Portfolio</span>
+        <i class="fa-regular fa-eye"></i>
+        <span>Portfolio</span>
+        <i class="fa-solid fa-code"></i>
+        <span>Portfolio</span>
+        <i class="fa-solid fa-lightbulb"></i>
+        <span>Portfolio</span>
+        <i class="fa-solid fa-head-side-virus"></i>
+        <span>Portfolio</span>
+        <i class="fa-regular fa-eye"></i>
+        <span>Portfolio</span>
+      </div>
     </div>
+  </div>
+  <button  onclick="window.open('file:///E:/myportfolio/assets/SathishResume.pdf', '_blank')" class="resume-view-button">
+    Resume <i class="fas fa-eye"></i>
+  </button>
+  <p class="resume-description">My resume with just a click, giving you quick access to my professional background and skills.</p>
+
+</div>
+
   </div>
 </section>
 
   
 
-  <!-- Skills Section -->
 <section id="skills" class="section">
   <h2>Skills</h2>
   <marquee id="skills-marquee" scrollamount="14" direction="right">
     <ul class="skills-list">
       <li>HTML & CSS</li>
       <li>TypeScript & Angular</li>
-      <li>C# & SQL</li>
+	  <li>Bootstrap</li>
+      <li>C#</li>
+	  <li>SQL & MSSQL</li>
     </ul>
   </marquee>
 </section>
@@ -183,7 +205,6 @@ window.addEventListener("scroll", () => {
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="section">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:sathishprakash33@gmail.com">sathishprakash33@gmail.com</a></p>
@@ -193,7 +214,6 @@ window.addEventListener("scroll", () => {
     <p>GitHub: <a href="https://github.com/sathishprakash33" target="_blank">github.com/in/sathish</a></p>
   </section>
 
-  <!-- Footer Section -->
   <footer>
     <p>&copy; 2024 My Portfolio | All Rights Reserved</p>
   </footer>
