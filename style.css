@@ -79,7 +79,6 @@ width: 180px;
 height: 180px;
 overflow: hidden;
 border-radius: 50%;
-/* box-shadow: 0 4px 10px #1c4d1c85;  */
 display: flex;
 justify-content: center;
 align-items: center;
@@ -87,7 +86,6 @@ transition: all 0.3s ease;
 animation: fadeInside 1s ease-out forwards 0.2s;
 }
 
-/* Profile Photo */
 .profile-photo {
 height: 100%;
 object-fit: cover;
@@ -158,7 +156,6 @@ width: 40px;
 transition: transform 0.2s ease-out;
 right:-172px;  
 }
-/* About Section Layout */
 .about-container {
 display: flex;
 justify-content: space-between;
@@ -213,7 +210,7 @@ transition: background 0.3s ease;
   background: black;
   padding: 8px;
   border-radius: 30%;
-  font-size: 20px; /* Larger icon size */
+  font-size: 20px; 
   transition: background 0.3s ease;
 }
 .social-icon.linkedin i {
@@ -239,21 +236,20 @@ margin:10px;
 padding:15px;
 }
 
-/* Resume View Button */
 .resume-view-button {
-padding: 12px 24px;
-background-color: #2ecc71;
-color: white;
+padding: 8px 13px;
+background-color: #f0f8f0;
+color: #1c4d1c;
 border: none;
-border-radius: 5px;
+border-radius: 6px;
 cursor: pointer;
-font-size: 16px;
 transition: background-color 0.3s ease;
 margin-bottom: 20px;
 }
 
 .resume-view-button:hover {
-background-color: #27ae60;
+background-color: #1c4d1cdb;
+color: white;
 }
 
 /* Resume Description */
@@ -605,4 +601,42 @@ body.dark-mode .nav-links {
 body.dark-mode .social-icon {
   border: 2px solid white;  
   border-radius: 30%;
+}
+
+.animated-icons {
+  display: flex;
+  overflow: hidden; 
+  width: 100%; 
+  position: relative;
+  margin-bottom:20px;
+background-color: #f0f8f0;
+}
+
+.scroll-content {
+  display: flex;
+  animation: scroll-left 12s linear infinite; 
+  white-space: nowrap;
+}
+
+.scroll-items {
+  display: flex; 
+  margin-right: 30px; 
+}
+
+.scroll-content i {
+margin-right: 7px;
+    margin-top: 4px; 
+}
+
+.scroll-content span {
+  margin-right: 30px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40%); 
+  }
 }
